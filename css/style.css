@@ -1,0 +1,46 @@
+@font-face {
+	font-family: 'proximanova';
+	src: local('ProximaNova-Light'), url('../fonts/ProximaNova-Regular.otf') format('opentype');
+	font-weight: 100;
+}
+
+.bloco{
+	height:300px; 
+	margin:20px 0px 20px 0px; 
+	background-size: 80px 60px; 
+	box-shadow:2px 3px 5px silver; 
+	border:0px solid rgba(67,118,209,0.70);
+}
+
+.texto-titulo{
+	font:16px proximanova;
+	color:silver;
+}
+
+.curso-texto{
+	background:rgba(99,147,221,0.90); 
+	width:100%; 
+	padding:7px; 
+	text-align:center; 
+	color:white; 
+	font:14px proximanova; 
+	display:none; 
+	line-height:18px; 
+	background-size:100%; 
+	margin-top:155px; 
+	min-height:105px;
+}
+
+a:hover{text-decoration:none}
+
+.titulo{
+	background:rgba(72,76,255,0.50); 
+	text-align:center; 
+	width:100%; 
+	padding:10px 0px; 
+	color:white;
+}
+
+*{font-family:proximanova;}
+
+.container{margin-bottom:40px}	
