@@ -4,11 +4,8 @@
 	$DBNAME 	= 'namastech';
 	$DBLOGIN 	= 'root';
 	$PASSWORD = '';
-
-	try{
-		$pdo = new PDO('mysql:host='.$HOST.';dbname='.$DBNAME.';', $DBLOGIN, $PASSWORD);	
-	}
-	catch(PDOException $e){
-		print "Erro: " . $e->getMessage() . "<br/>";
-	    die();
-	}
+  
+  $connect = new mysqli($HOST, $DBLOGIN, $PASSWORD, $DBNAME); 
+  if (!$connect) {
+    die('não foi possivel conectar ao banco!');
+  }

@@ -3,9 +3,9 @@
   <form class="form-horizontal" method="post" action="login.php">
   	<input type="hidden" name="loginUser">
     <div class="form-group">
-      <label for="login" class="col-sm-2 col-sm-offset-2 control-label" style="text-align:left">Email</label>
+      <label for="nome" class="col-sm-2 col-sm-offset-2 control-label" style="text-align:left">Nome do projeto</label>
       <div class="col-sm-7">
-        <input type="text" class="form-control" id="login" placeholder="Email" name="email">
+        <input type="text" class="form-control" id="nome" placeholder="Nome do projeto" name="nome">
       </div>
     </div>
 
@@ -13,19 +13,6 @@
       <label for="password" class="col-sm-2 col-sm-offset-2 control-label" style="text-align:left">Senha</label>
       <div class="col-sm-7">
         <input type="password" class="form-control" id="password" placeholder="Senha" name="password">
-      </div>
-    </div>
-
-    <div class="form-group">
-      <label for="type" class="col-sm-2 col-sm-offset-2 control-label" style="text-align:left">Tipo</label>
-      <div class="col-sm-7">
-        <select id="type" class="form-control" name="type">
-        	<option>Tipo de usuario</option>
-        	<option value="CLI">Cliente</option>
-        	<option value="DEV">Desenvolvimento</option>
-        	<option value="FIN">Financeiro</option>
-        	<option value="MAR">Marketing</option>
-        </select>
       </div>
     </div>
 

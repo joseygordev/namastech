@@ -1,5 +1,4 @@
 <?php include '../inc/header.php'; ?>
-<div class="interesse" style="display:none; z-index:4; background:white; border:1px solid gray; position:absolute;"></div>
 <div class="container" style="margin-top:10px">
 	<div class="row">
 		<div class="col-md-12">
