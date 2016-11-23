@@ -1,4 +1,28 @@
-<?php include '../inc/header.php'; ?>
+<?php 
+  include '../inc/header.php'; 
+  include '../../config/config.php';
+
+  $sql = "SELECT 
+            P.*,
+            S.nome,
+            F.id_projeto,
+            F.valor
+          FROM 
+            projeto P 
+          INNER JOIN
+            financeiro F
+          ON
+            F.id_projeto = P.id
+          INNER JOIN 
+            status S 
+          ON 
+            F.status_id = S.id
+          ORDER BY
+            F.id desc
+          ";
+
+  $result = mysqli_query($connect,$sql); 
+?>
 <div class="container" style="margin-top:10px">
 	<div class="row">
 		<div class="col-md-12">
@@ -9,25 +33,27 @@
 							<th>O.S</th>
 							<th>QTA</th>
 							<th>Trabalho</th>
-							<th>Pendência</th>
+							<th>Status</th>
 							<th>Informações</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr class="danger alert-danger" id="trb001">
-							<th>001</th>
-							<th>200</th>
-							<th>Cartão de Visita</th>
-							<th>Arte | Orçamento</th>
-							<th><a href="edit.php">Editar</a></th>
-						</tr>
-						<tr>
-							<th>009</th>
-							<th>2</th>
-							<th>Cardápios</th>
-							<th>Orçamento</th>
-							<th><a href="edit.php">Editar</a></th>
-						</tr>
+            <?php
+                while($consulta = mysqli_fetch_array($result)) {
+                  $classAtivo = '';
+                  if ($consulta['ativo'] != 1) {
+                    $classAtivo = 'danger alert-danger';
+                  }
+
+                  echo '<tr class="'.$classAtivo.'">
+                      <td>' .  $consulta['cod_projeto'] . '</td>
+                      <td>' .  $consulta['quantidade'] . '</td>
+                      <td>' .  utf8_encode($consulta['descricao']) . '</td>
+                      <td>' .  utf8_encode($consulta['nome']) . '</td>
+                      <td><a href="edit.php?id='.$consulta['id'].'">Editar</a></td>
+                  </tr>';
+                } 
+            ?>
 					</tbody>
 				</table>
 			</div>

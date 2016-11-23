@@ -25,12 +25,12 @@
 
 			<div class="col-md-2 col-xs-6">
 			   <ul class="nav navbar-nav nav-pills navbar-right" role="tablist">
-			  		<li role="presentation" class="alert-danger" id='msgAlerta'>
+			<!--   		<li role="presentation" class="alert-danger" id='msgAlerta'>
 			  			<a href="#" id="alerta" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Um trabalho requer sua atenção.">
 			          Alerta
 			          <span class="badge">1</span>
 			        </a>
-			  		</li>
+			  		</li> -->
 			       <li><a href="../../login.php?q=logout">Sair</a></li>
 			   </ul>
 			</div>
